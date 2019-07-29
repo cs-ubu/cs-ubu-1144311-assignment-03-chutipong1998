@@ -3,19 +3,17 @@
 <div class="container" style="padding-top: 50px;">
     <div class="row">
         <div class="calendar_entry col-lg-4">
-            <!-- <div class="col-md"> -->
-                    <br/>
-                    <h2>กิจกรรมสาขา</h2>
-                    <h4>24 ต.ค. 2561</h4>
-                    <p>
-                      ถึงน้องๆทุกคน พี่ปี 4 อยากให้เข้าร่วมกิจกรรม น้องติวพี่่ พี่เรียนกับน้อง
-                    </p>
+            <form action="#" method="get">
+                    <input type="number" placeholder="1.0" step="any" min="0" max="9999999" name="num">
                     <button class="btn btn-primary">ดูรายละเอียด</button>
-            <!-- </div> -->
+                    <div class="jumbotron">
+                        <div class="row">
+                            <div class="col-md">b = {{ answer }}</div>
+                        </div>
+                    </div>
+            </form>
+                
         </div>
     </div>
 </div>
-
-
-
 {% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'commathweb/base1.html' %}
+
+{% block content %}
+
+{% csrf_token %} 
+	<!-- contact300 -->
+	<div class="container-contact300">
+		<div class="wrap-contact300">
+			<button class="btn-hide-contact300">
+				<i class="zmdi zmdi-close"></i>
+			</button>
+
+			<div class="contact300-form-title" style="background-image: url(../static/commathweb/images/bg-02.jpg);">
+				<span style="text-align: center;">แก้ระบบสมการเชิงเส้น $Ax = b$</span>
+			</div>
+
+
+
+			
+
+			<form class="contact300-form validate-form" action="/solve/" method="GET">
+				<!-- <div class="wrap-input100 validate-input">
+					<div class="jumbotron">
+						<div class="row">
+							<div class="col-md">ผลลัพธ์<hr>555555</div>
+						</div>
+					</div>
+				</div> -->
+				<div class="wrap-input300 validate-input">
+					<input id="name" class="input300" type="number" name="name1" placeholder="กรุณาใส่จำนวนสมการ">
+					<span class="focus-input300"></span>
+					<label class="label-input300" for="name">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+
+
+				<!-- <div class="wrap-input300 validate-input">
+					<input id="email" class="input300" type="text" name="email" placeholder="Eg. example@email.com">
+					<span class="focus-input300"></span>
+					<label class="label-input300" for="email">
+						<span class="lnr lnr-envelope m-b-5"></span>
+					</label>
+				</div>
+
+
+				<div class="wrap-input300 validate-input">
+					<input id="phone" class="input300" type="text" name="phone" placeholder="Eg. +1 800 000000">
+					<span class="focus-input300"></span>
+					<label class="label-input300" for="phone">
+						<span class="lnr lnr-smartphone m-b-2"></span>
+					</label>
+				</div>
+
+
+				<div class="wrap-input300 validate-input">
+					<textarea id="message" class="input300" name="message" placeholder="Your comments..."></textarea>
+					<span class="focus-input300"></span>
+					<label class="label-input300 rs1" for="message">
+						<span class="lnr lnr-bubble"></span>
+					</label>
+				</div> -->
+
+				<div class="container-contact300-form-btn">
+					<button class="contact300-form-btn">
+						Send Now
+					</button>
+				</div>
+			</form>
+
+		</div>
+	</div> <!-- end contact300 -->
+
+{% endblock %}	
