@@ -1,4 +1,4 @@
-{% extends 'commathweb/base1.html' %}
+{% extends 'commathweb/baseTemplate/base.html' %}
 
 {% block content %}
 
@@ -14,7 +14,7 @@
 			</div>
 
 			<form action="#" method="GET" class="contact200-form validate-form">
-
+				{% csrf_token %}
 				<div class="wrap-input100 validate-input">
 					<!-- <input id="name" class="input300" type="text" name="num" placeholder="Full name" value="{{ num }}"> -->
 					<input id="name" class="input100" type="number" placeholder="1.000" step="any" min="0" max="9999999" name="num" value="{{ x }}">

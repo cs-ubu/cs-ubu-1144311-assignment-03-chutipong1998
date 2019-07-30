@@ -19,10 +19,10 @@ from commathweb import views
 
 urlpatterns = [
     path('', views.index),
-    path('single/', views.single),
+    path('single/', views.decto32fp),
     # path('base/', views.base),
-    path('double/', views.double),
-    path('linear/', views.linear),
-    path('solve/',views.solve),
+    path('double/', views.decto64fp),
+    path('solve/', views.linear),
+    # path('solve/',views.solve),
     path('admin/', admin.site.urls),
 ]

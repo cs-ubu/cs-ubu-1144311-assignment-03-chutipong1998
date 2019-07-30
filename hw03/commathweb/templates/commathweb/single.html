@@ -1,4 +1,4 @@
-{% extends 'commathweb/base1.html' %}
+{% extends 'commathweb/baseTemplate/base.html' %}
 
 {% block content %}
 
@@ -13,7 +13,8 @@
 				<span style="text-align: center;">IEEE floating point single precision (32-bit)</span>
 			</div>
 
-			<form action="#" method="get" class="contact100-form validate-form">
+			<form action="" method="get" class="contact100-form validate-form">
+				{% csrf_token %}
 				<!-- <div class="wrap-input100 validate-input">
 					<input class="input100" type="number" placeholder="1.0" step="any" min="0" max="9999999" name="num" value="{{ num }}">
 					<div class="container">

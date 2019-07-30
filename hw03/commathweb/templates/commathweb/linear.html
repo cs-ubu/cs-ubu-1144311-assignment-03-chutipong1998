@@ -1,8 +1,7 @@
-{% extends 'commathweb/base1.html' %}
+{% extends 'commathweb/baseTemplate/base.html' %}
 
 {% block content %}
 
-{% csrf_token %} 
 	<!-- contact300 -->
 	<div class="container-contact300">
 		<div class="wrap-contact300">
@@ -14,25 +13,47 @@
 				<span style="text-align: center;">แก้ระบบสมการเชิงเส้น $Ax = b$</span>
 			</div>
 
+			<form class="contact300-form validate-form" action="#" method="GET">
 
+				<!-- {% for i in y %} -->
+					<!-- <{{ i }}> -->
+				
 
-			
-
-			<form class="contact300-form validate-form" action="/solve/" method="GET">
-				<!-- <div class="wrap-input100 validate-input">
-					<div class="jumbotron">
-						<div class="row">
-							<div class="col-md">ผลลัพธ์<hr>555555</div>
-						</div>
-					</div>
-				</div> -->
 				<div class="wrap-input300 validate-input">
-					<input id="name" class="input300" type="number" name="name1" placeholder="กรุณาใส่จำนวนสมการ">
+					<input id="name" class="input300" type="text" name="eq" placeholder="กรุณาใส่สมการ">
 					<span class="focus-input300"></span>
 					<label class="label-input300" for="name">
 						<span class="lnr lnr-user m-b-2"></span>
 					</label>
 				</div>
+
+				<!-- {% endfor %} -->
+
+				<!-- <div class="wrap-input300 validate-input">
+					<input id="name" class="input300" type="text" name="name" placeholder="Full name">
+					<span class="focus-input300"></span>
+					<label class="label-input300" for="name">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div> -->
+
+				<div class="wrap-input300 validate-input">
+					<input id="name" class="input300" type="text" name="eqb" placeholder="กรุณาใส่สมการ">
+					<span class="focus-input300"></span>
+					<label class="label-input300" for="name">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+				
+
+				<div class="wrap-input100 validate-input">
+					<div class="jumbotron">
+						<div class="row">
+							<div class="col-md">ผลลัพธ์<hr>555555</div>
+						</div>
+					</div>
+				</div>
+				
 
 
 				<!-- <div class="wrap-input300 validate-input">
@@ -72,3 +93,19 @@
 	</div> <!-- end contact300 -->
 
 {% endblock %}	
+
+<script>
+	function findGetParameter(parameterName) {
+    var result = null,
+        tmp = [];
+    location.search
+        .substr(1)
+        .split("&")
+        .forEach(function (item) {
+          tmp = item.split("=");
+          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+        });
+    return result;
+	}
+	var data = findGetParameter('param1');
+</script>
