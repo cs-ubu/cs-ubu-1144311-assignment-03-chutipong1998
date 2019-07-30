@@ -60,9 +60,8 @@ def decto64fp(req):
         be = bin(e)[2:]
         b = str(s) + be + m
         b += '0'*(64-len(b))
-        l = '0'*32
         print(len(b))
-        result = {'answer':b, 'x':x, 'l':l}
+        result = {'answer':b, 'x':x}
     except :
         result = {'answer':"ข้อมูลไม่ถูกต้อง กรุณากรอกค่าใหม่"}
 
